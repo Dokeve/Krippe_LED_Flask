@@ -1,0 +1,12 @@
+services:
+  db:
+    image: mariadb:11
+    environment:
+      MYSQL_DATABASE: led_db
+      MYSQL_USER: led_user
+      MYSQL_PASSWORD: led_pass
+      MYSQL_ROOT_PASSWORD: rootpass
+    ports: ["3306:3306"]
+  adminer:
+    image: adminer
+    ports: ["8080:8080"]
